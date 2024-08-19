@@ -1,0 +1,101 @@
+{
+	"/ code": {
+		"classes": [
+			"codes"
+		]
+	},
+	"/ components": {
+		"classes": [
+			"component",
+			"components"
+		]
+	},
+	"/ errors": {
+		"methods": [
+			"silent_error_catcher"
+		],
+		"classes": [
+			"error_catcher"
+		]
+	},
+	"/ is": {
+		"methods": [
+			"is"
+		],
+		"classes": [
+			"is"
+		]
+	},
+	"/ method": {
+		"classes": [
+			"_method",
+			"_method_attributs",
+			"method"
+		]
+	},
+	"/ modules": {
+		"groups": [
+			"/ code",
+			"/ components",
+			"/ errors",
+			"/ is",
+			"/ method",
+			"/ result value",
+			"/ stdio",
+			"/ to"
+		]
+	},
+	"/ result value": {
+		"classes": [
+			"result",
+			"type",
+			"value"
+		]
+	},
+	"/ stdio": {
+		"methods": [
+			"_test_stdio"
+		],
+		"classes": [
+			"stdio"
+		]
+	},
+	"/ to": {
+		"methods": [
+			"to"
+		],
+		"classes": [
+			"to"
+		]
+	},
+	"/ tu parts": {
+		"methods": [
+			"____test_count_shared",
+			"____test_count_visible",
+			"____test_folders_test_files",
+			"____test_no_param",
+			"____test_not_valid_pdf",
+			"____test_PDF_GET_ATTACHMENT",
+			"____test_pdf_with_warning",
+			"____test_QPDF_Check_environment",
+			"____test_QPDF_Update",
+			"____test_QPDF_Use_component",
+			"____test_QPDF_Use_system",
+			"____test_valid_pdf",
+			"____test_valid_pdf_attachments"
+		]
+	},
+	"# compiler": {
+		"methods": [
+			"m_adaptative",
+			"m_coopertive",
+			"m_preemptive"
+		]
+	},
+	"# methods": {
+		"methods": [
+			"show_on_disk"
+		]
+	},
+	"trash": {}
+}

@@ -1,0 +1,212 @@
+{
+	"____tests": {
+		"methods": [
+			"____test_desinstall",
+			"____test_install"
+		]
+	},
+	"- API component": {
+		"methods": [
+			"QPDF Check environment",
+			"QPDF Update",
+			"QPDF Use component",
+			"QPDF Use system"
+		]
+	},
+	"- API QPDF": {
+		"groups": [
+			"/ hidden"
+		],
+		"methods": [
+			"___test_api",
+			"PDF Get attachments"
+		]
+	},
+	"- arch": {
+		"methods": [
+			"____test_arch",
+			"arch"
+		],
+		"classes": [
+			"arch"
+		]
+	},
+	"- brew": {
+		"methods": [
+			"____test_brew"
+		],
+		"classes": [
+			"brew"
+		]
+	},
+	"- cli": {
+		"methods": [
+			"____test_cli"
+		],
+		"classes": [
+			"cli"
+		]
+	},
+	"- compiler": {
+		"methods": [
+			"Compiler_Methods",
+			"Compiler_Variables"
+		]
+	},
+	"- config": {
+		"methods": [
+			"____test_config"
+		],
+		"classes": [
+			"config"
+		]
+	},
+	"- dyld_info": {
+		"methods": [
+			"____test_dyld_info"
+		],
+		"classes": [
+			"dyld_info"
+		]
+	},
+	"- environ": {
+		"methods": [
+			"environ"
+		],
+		"classes": [
+			"environ"
+		]
+	},
+	"- http request": {
+		"methods": [
+			"____test_http"
+		],
+		"classes": [
+			"http_request"
+		]
+	},
+	"- install_name_tool": {
+		"methods": [
+			"____test_install_name_tool"
+		],
+		"classes": [
+			"install_name_tool"
+		]
+	},
+	"- is": {
+		"methods": [
+			"____test_is",
+			"is"
+		],
+		"classes": [
+			"is"
+		]
+	},
+	"- lipo": {
+		"methods": [
+			"____test_lipo",
+			"build_ub"
+		],
+		"classes": [
+			"lipo"
+		]
+	},
+	"- methods": {
+		"methods": [
+			"current class",
+			"current class name",
+			"on_startup_application",
+			"show_on_disk",
+			"to_pasteboard"
+		]
+	},
+	"- mime": {
+		"methods": [
+			"____test_mime"
+		],
+		"classes": [
+			"mime"
+		]
+	},
+	"- modules": {
+		"groups": [
+			"- arch",
+			"- brew",
+			"- cli",
+			"- config",
+			"- dyld_info",
+			"- environ",
+			"- http request",
+			"- install_name_tool",
+			"- is",
+			"- lipo",
+			"- mime",
+			"- otool",
+			"- qpdf",
+			"- to",
+			"- xcode-select",
+			"- zsh"
+		]
+	},
+	"- otool": {
+		"methods": [
+			"____test_otool"
+		],
+		"classes": [
+			"otool"
+		]
+	},
+	"- qpdf": {
+		"methods": [
+			"____test_qpdf"
+		],
+		"classes": [
+			"_qpdf_attachment",
+			"qpdf"
+		]
+	},
+	"- to": {
+		"methods": [
+			"to"
+		],
+		"classes": [
+			"to"
+		]
+	},
+	"- xcode-select": {
+		"methods": [
+			"____test_xcode_select"
+		],
+		"classes": [
+			"xcode_select"
+		]
+	},
+	"- zsh": {
+		"methods": [
+			"____test_zsh"
+		],
+		"classes": [
+			"zsh"
+		]
+	},
+	"(- host scope)": {},
+	"(- host_database)": {},
+	"/ hidden": {
+		"methods": [
+			"PDF list attachments"
+		]
+	},
+	"/ private": {
+		"methods": [
+			"_exit_to_shell_",
+			"_get_uuid",
+			"_to_pasteboard"
+		]
+	},
+	"trash": {
+		"groups": [
+			"(- host scope)",
+			"(- host_database)"
+		]
+	}
+}

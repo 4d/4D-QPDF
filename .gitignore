@@ -1,0 +1,38 @@
+# Data folder
+[dD][aA][tT][aA]/
+
+# Derived data
+DerivedData/
+
+# Libraries
+Libraries/
+
+# User preferences
+userPreferences.*/
+
+# Uncomment (remove the following # ) to ignore Trash
+Project/Trash
+Data/
+WebFolder/
+
+data.4DD
+data.journal
+
+# System files
+.DS_Store
+ehthumbs.db
+Thumbs.db
+
+Components/
+
+ignore
+buildApp.4DSettings
+settings.4DSettings
+_o_README.md
+dependencies.json
+_o_UT-QPDF.txt
+UT-QPDF.txt
+qpdf-mac-bin.zip
+4D-QPDF/Resources/qpdf/mac/-arm
+4D-QPDF/Resources/qpdf/mac/-ub
+4D-QPDF/Helpers/qpdf/mac/intel

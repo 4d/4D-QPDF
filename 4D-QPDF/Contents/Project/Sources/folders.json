@@ -1,0 +1,55 @@
+{
+	"____tests": {},
+	"- API component": {},
+	"- API QPDF": {
+		"groups": [
+			"/ hidden"
+		]
+	},
+	"- arch": {},
+	"- brew": {},
+	"- cli": {},
+	"- compiler": {},
+	"- config": {},
+	"- dyld_info": {},
+	"- http request": {},
+	"- install_name_tool": {},
+	"- is": {},
+	"- lipo": {},
+	"- methods": {},
+	"- mime": {},
+	"- modules": {
+		"groups": [
+			"- arch",
+			"- brew",
+			"- cli",
+			"- config",
+			"- dyld_info",
+			"- http request",
+			"- install_name_tool",
+			"- is",
+			"- lipo",
+			"- mime",
+			"- otool",
+			"- qpdf",
+			"- to",
+			"- xcode-select",
+			"- zsh"
+		]
+	},
+	"- otool": {},
+	"- qpdf": {},
+	"- to": {},
+	"- xcode-select": {},
+	"- zsh": {},
+	"(- host scope)": {},
+	"(- host_database)": {},
+	"/ hidden": {},
+	"/ private": {},
+	"trash": {
+		"groups": [
+			"(- host scope)",
+			"(- host_database)"
+		]
+	}
+}
