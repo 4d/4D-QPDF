@@ -1,0 +1,12 @@
+changelog:
+  categories:
+    - title: 🏕 Features
+      labels:
+        - features
+        - user story
+    - title: 👒 Bugs
+      labels:
+        - bug
+    -title: 🎨 Improvements
+      labels:
+        - enhancement

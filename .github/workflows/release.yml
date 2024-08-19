@@ -1,0 +1,79 @@
+name: Release
+on: 
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+  packages: write
+
+env:
+  TOOL4D_PRODUCT_LINE: '20Rx'
+  TOOL4D_VERSION: '20R5'
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: [self-hosted,ARM64]
+    steps:
+    - name: 📄 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        lfs: true
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
+    - name: 🏗️  Build  ${{ github.event.repository.name }}
+      uses: 4d/build4d-action@main
+      with:
+        project: ${{ github.event.repository.name }}/Project/${{ github.event.repository.name }}.4DProject
+        product-line: ${{env.TOOL4D_PRODUCT_LINE}}
+        version: ${{env.TOOL4D_VERSION}}
+        build: official
+        targets : all
+        actions: "build,pack,sign,archive"
+        sign-files: "Helpers/qpdf/mac/ub/bin/qpdf"
+        sign-certificate: "Developer ID Application: 4D"
+        token: ${{ secrets.DLTK }}
+
+    - name: Notarize
+      run: |
+        xcrun notarytool submit "${{ github.event.repository.name }}/build/${{ github.event.repository.name }}.zip" --keychain-profile "notary" --wait >> notary_tool.log
+        if grep -r "status: Accepted" "notary_tool.log"; then
+          echo "Notarize Success"
+          exit 0
+        else
+          echo "Notarize Failed"
+          exit 1
+        fi
+            
+    - name: Upload Artifact
+      if: github.event_name != 'pull_request'
+      uses: actions/upload-artifact@v4
+      with:
+        name: "${{ github.event.repository.name }}.zip"
+        path: "${{ github.event.repository.name }}/build/${{ github.event.repository.name }}.zip"
+        retention-days: 1
+        if-no-files-found: error
+  release:
+    needs: build
+    name: "Release Component"
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📄 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          # Disabling shallow clone is recommended for improving relevancy of reporting
+          fetch-depth: 0
+      - name: Download packages
+        uses: actions/download-artifact@v4
+        with:
+          name: "${{ github.event.repository.name }}.zip"
+          path: artifact
+      - name: Display Artifact Directory Content
+        run: ls -R artifact
+      - name: 📦 release package
+        run: |
+          gh release upload ${{github.event.release.tag_name}} "${{github.workspace}}/artifact/${{ github.event.repository.name }}.zip"
+        env:
+          GITHUB_TOKEN: ${{ github.TOKEN }}
