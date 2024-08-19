@@ -15,7 +15,7 @@ var $file : 4D:C1709.File
 $feature:="https://github.com/4d/4d/issues/4831"
 
 
-$path:="/RESOURCES/tests/Many Included Files.pdf"
+$path:="/RESOURCES/test-files/Many Included Files.pdf"
 
 
 /*
@@ -28,11 +28,11 @@ $path:="/RESOURCES/tests/Many Included Files.pdf"
 $file:=File:C1566($path; fk posix path:K87:1)
 
 //#TM file
-$folder:=Folder:C1567("/Users/4d/Downloads")
+//$folder:=Folder("/Users/4d/Downloads")
 
-$_files:=$folder.files().query(" extension = :1 "; ".pdf")
+//$_files:=$folder.files().query(" extension = :1 "; ".pdf")
 
-$file:=$_files.first()
+//$file:=$_files.first()
 
 
 //var $_l:Collection

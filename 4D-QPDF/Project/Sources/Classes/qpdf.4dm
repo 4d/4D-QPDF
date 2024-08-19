@@ -578,16 +578,12 @@ Function get pdf_path : Text
 	
 Function get encrypted : Boolean
 	var $result : 4D:C1709.SystemWorker
-	var $path : Text
 	
 	If (This:C1470.has_file)
 		
 		If (This:C1470.pdf_file.exists)
 			
-			
-			//$path:=Replace string(This.pdf_path; " "; "\\ "; Length(This.pdf_path))
-			
-			$result:=This:C1470.execute(" --is-encrypted \""+$path+"\"")
+			$result:=This:C1470.execute(" --is-encrypted \""+This:C1470.pdf_path+"\"")
 			
 			
 /*
@@ -600,13 +596,12 @@ Function get encrypted : Boolean
 			
 			If (Length:C16($result.responseError)=0)
 				
-				
 				return $result.exitCode=0
-				
 				
 			End if 
 			
 		End if 
+		
 	End if 
 	
 	
@@ -614,14 +609,14 @@ Function get encrypted : Boolean
 Function get toc->$toc : Object
 	
 	var $result : 4D:C1709.SystemWorker
-	var $path : Text
+	//var $path : Text
 	
 	$toc:={attachments: {}}
 	
 	
 	//$path:=Replace string(This.pdf_path; " "; "\\ "; Length(This.pdf_path))
 	
-	$result:=This:C1470.execute(" --json  --no-warn \""+$path+"\"")
+	$result:=This:C1470.execute(" --json  --no-warn \""+This:C1470.pdf_path+"\"")
 	
 	If ((Not:C34(Undefined:C82($result.exitCode))) && (Num:C11($result.exitCode)=0) || (Num:C11($result.exitCode)=3))
 		
@@ -657,11 +652,8 @@ Function list_attachments : Collection
 	
 	var $result : 4D:C1709.SystemWorker
 	var $_ : Collection
-	var $path : Text
 	
-	//$path:=Replace string(This.pdf_path; " "; "\\ "; Length(This.pdf_path))
-	
-	$result:=This:C1470.execute(" --list-attachments \""+$path+"\"")
+	$result:=This:C1470.execute(" --list-attachments \""+This:C1470.pdf_path+"\"")
 	
 	$_:=to.collection($result.response)
 	
@@ -805,7 +797,6 @@ Function get version : Text
 	
 	$cache:=This:C1470._cache()
 	
-	
 	If ($cache.version="")
 		var $result : 4D:C1709.SystemWorker
 		var $_ : Collection
@@ -942,7 +933,6 @@ Function show_object($ref : Text) : 4D:C1709.SystemWorker
 	var $result : 4D:C1709.SystemWorker
 	var $save_datatype : Text
 	var $cache : Object
-	var $path : Text
 	
 	If (Bool:C1537(This:C1470.pdf_file.exists))
 		$cache:=This:C1470._cache()
@@ -950,10 +940,7 @@ Function show_object($ref : Text) : 4D:C1709.SystemWorker
 		$save_datatype:=$cache.sw_options.dataType
 		$cache.sw_options.dataType:="blob"
 		
-		
-		//$path:=Replace string(This.pdf_path; " "; "\\ "; Length(This.pdf_path))
-		
-		$result:=This:C1470.execute(" --show-object="+$ref+" --filtered-stream-data \""+$path+"\" ")
+		$result:=This:C1470.execute(" --show-object="+$ref+" --filtered-stream-data \""+This:C1470.pdf_path+"\" ")
 		
 		Case of 
 				
