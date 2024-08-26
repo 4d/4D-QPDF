@@ -1,6 +1,6 @@
-## __About the 4D QPDF Component__
+## __About the 4D-QPDF Component__
 
-The __4D QPDF__ component provides the __PDF Get attachments__ method accessible within the 4D language.
+The __4D-QPDF__ component provides the __PDF Get attachments__ method accessible within the 4D language.
 
 This component utilizes an external open source library named __QPDF__ (https://qpdf.sourceforge.io) and is available on the 4D GitHub (https://github.com/4d).
 
@@ -78,3 +78,10 @@ It is located here : /Resources/qpdf/config.json
 
 <sup>(2)</sup>
 On the first installation of __Homebrew__, 4D may need to be run in sudo mode and may ask you to log in with an admin account.
+
+## __How to build 4D-QPDF Component__
+
+To build your own "4D-QPDF" component, use the "build 4D-QPDF" project.
+Execute the "build" method.
+
+If the build is successful, a finder window opens with your built component.

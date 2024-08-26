@@ -23,7 +23,7 @@ data.journal
 ehthumbs.db
 Thumbs.db
 
-#Components/
+# Components/
 
 ignore
 buildApp.4DSettings
