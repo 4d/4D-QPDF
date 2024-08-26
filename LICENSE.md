@@ -112,7 +112,7 @@ The Licensee expressly undertakes:
 
 The Licensee undertakes not to directly or indirectly infringe the intellectual property rights of the Holder on the Software and to take, where applicable, vis- à-vis its staff, any and all measures required to ensure respect of said intellectual property rights of the Holder.
 
-### 6.4 Included third part components
+### 6.4 THIRD PARTY COMPONENTS
 
 This software uses QPDF, which is licensed under the Apache 2.0 license. You can find a copy of this license at the following address: https://www.apache.org/licenses/LICENSE-2.0, as well as the LICENSE.MD and NOTICE.MD files in the "third party" directory.
 QPDF is a free tool that facilitates the manipulation of PDF files. 
