@@ -1,1 +1,1 @@
-Build4D component is available here: https://github.com/4d-depot/Build4D
+Build4D component is available here: [Build4D](https://github.com/4d-depot/Build4D)
