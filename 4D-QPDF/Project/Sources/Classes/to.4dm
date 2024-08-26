@@ -93,7 +93,7 @@ Function posix($path : Variant) : Text
 		Else 
 			
 			// Error handling for invalid value types
-			ASSERT:C1129(False:C215; "error to_posix :value could be a path or 4D.Folder or 4D.File or null for home directory")
+			ASSERT:C1129(False:C215; "error to.posix: value could be a path or 4D.Folder or 4D.File or null for home directory")
 			
 	End case 
 	

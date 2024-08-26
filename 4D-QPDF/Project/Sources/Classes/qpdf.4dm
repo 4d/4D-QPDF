@@ -60,8 +60,6 @@ property ____ : Object
 
 Class constructor
 	
-	var $key : Text
-	
 	var $cache : Object
 	
 	
@@ -471,6 +469,7 @@ Function infos : Object
 		$brew:=cs:C1710.brew.new()
 		$cache.package_infos:=$brew.package_infos("qpdf")
 	End if 
+	
 	return $cache.package_infos
 	
 	
@@ -501,14 +500,16 @@ Function origin : Text
 	
 	//https://github.com/qpdf/qpdf/releases/latest
 	
-	
 	$infos:=This:C1470.infos()
+	
 	Case of 
+			
 		: ($infos.urls=Null:C1517)
 			
 		: ($infos.urls.stable=Null:C1517)
 			
 		: ($infos.urls.stable.url=Null:C1517)
+			
 		Else 
 			
 			return $infos.urls.stable.url
@@ -542,12 +543,15 @@ Function set pdf_file($file : Variant)
 	//todo: controler le type entrée text / object
 	
 	Case of 
+			
 		: (Value type:C1509($file)=Is text:K8:3)
+			
 			This:C1470._pdf_file:=File:C1566($file)
 			
 		: ((Value type:C1509($file)=Is object:K8:27) && (OB Instance of:C1731($file; 4D:C1709.File)))
 			
 			This:C1470._pdf_file:=File:C1566($file.platformPath; fk platform path:K87:2)
+			
 		Else 
 			
 	End case 
@@ -561,15 +565,18 @@ Function get has_file : Boolean
 	
 	
 Function get pdf_file : 4D:C1709.File
+	
 	return This:C1470._pdf_file
 	
 	
 	
 Function get pdf_path : Text
+	
 	Case of 
 		: (This:C1470.pdf_file=Null:C1517)
 			
 		Else 
+			
 			return to.absolute_file(This:C1470._pdf_file).path
 			
 	End case 
@@ -613,8 +620,6 @@ Function get toc->$toc : Object
 	
 	$toc:={attachments: {}}
 	
-	
-	//$path:=Replace string(This.pdf_path; " "; "\\ "; Length(This.pdf_path))
 	
 	$result:=This:C1470.execute(" --json  --no-warn \""+This:C1470.pdf_path+"\"")
 	
@@ -753,12 +758,10 @@ Function attachments->$_attachments : Collection
 			$a._modificationDate:=$_update[0]
 		End if 
 		
-		
 		$_attachments.push($a.to_object)
 		
 	End for each 
 	
-	//return $_attachments
 	
 	
 	
@@ -775,6 +778,7 @@ Function get exe : 4D:C1709.File
 	
 	
 Function get system_ready : Boolean
+	
 	var $path : Text
 	
 	$path:=This:C1470.system_path
@@ -837,8 +841,6 @@ Function install() : Boolean
 			Else 
 				
 				$success:=$brew.install_package("qpdf")
-				
-				
 				
 				If ($success)
 					
@@ -996,7 +998,7 @@ Function execute($command : Text) : Object
 		//https://qpdf.readthedocs.io/en/stable/cli.html#exit-status
 		
 /*
-Exit Codes
+Exit Codes
 		
 0 no errors or warnings were found
 		

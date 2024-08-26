@@ -30,7 +30,7 @@ Function get resources_folder : 4D:C1709.Folder
 Function get helpers_folder : 4D:C1709.Folder
 	
 	If (This:C1470._helpers_folder=Null:C1517)
-		This:C1470._helpers_folder:=This:C1470.resources_folder.parent.folder("Helpers")
+		This:C1470._helpers_folder:=Folder:C1567(Folder:C1567("/PACKAGE/Helpers").platformPath; fk platform path:K87:2)
 	End if 
 	
 	return This:C1470._helpers_folder
