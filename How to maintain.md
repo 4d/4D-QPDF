@@ -89,6 +89,7 @@ The internal buildApp of 4D does not currently copy this folder during the compi
 Therefore, we have included the "build 4D-QPDF" base, which uses the [Build4D](https://github.com/4d-depot/Build4D) component to include the Helpers folder during the component's build and signing process.
 
 To build your own "4D-QPDF" component, use the "build 4D-QPDF" project.
+
 Execute the "build" method.
 
 If the build is successful, a finder window opens with your built component.
