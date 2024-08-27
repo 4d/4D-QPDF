@@ -94,6 +94,8 @@ To build your own "4D-QPDF" component, use the "build 4D-QPDF" project.
 Adapt the "build" method to your needs.  [settings documentation](https://github.com/4d-depot/Build4D/blob/main/Build4D/Documentation/Classes/Component.md)
 , [visit HDI here](https://blog.4d.com/build-your-compiled-structure-or-component-with-build4d/)
 
+[build method code](https://github.com/4d/4D-QPDF/blob/main/build%204D-QPDF/Project/Sources/Methods/build.4dm)
+
 Execute the "build" method.
 
 If the build is successful, a finder window opens with your built component.
