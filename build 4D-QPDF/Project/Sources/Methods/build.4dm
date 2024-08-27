@@ -10,6 +10,10 @@ var $success : Boolean
 $settings:={}
 $settings.projectFile:="../4D-QPDF/Project/4D-QPDF.4DProject"
 
+/*
+/!\ WARNING: THE CONTENTS OF THE DESTINATION FOLDER WILL BE DELETED BEFORE THE BUILD.
+*/
+
 $settings.destinationFolder:="../4D-QPDF_UnitTests/Components/"
 
 $settings.buildName:="4D-QPDF"
