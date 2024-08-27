@@ -82,7 +82,8 @@ On the first installation of __Homebrew__, 4D may need to be run in sudo mode an
 ## __How to build 4D-QPDF Component__
 
 In order to notarize the component with Apple's services, its structure must adhere to certain rules. 
-The QPDF binary files cannot be located in the Resources folder of the base. They should be placed in the Helpers folder at the same level as the Resources folder.
+The QPDF binary files cannot be located in the Resources folder of the base. 
+They should be placed in the Helpers folder at the same level as the Resources folder.
 
 The internal buildApp of 4D does not currently copy this folder during the compilation of a component.
 
@@ -92,6 +93,7 @@ To build your own "4D-QPDF" component, use the "build 4D-QPDF" project.
 
 Adapt the "build" method to your needs.  [settings documentation](https://github.com/4d-depot/Build4D/blob/main/Build4D/Documentation/Classes/Component.md)
 , [visit HDI here](https://blog.4d.com/build-your-compiled-structure-or-component-with-build4d/)
+
 Execute the "build" method.
 
 If the build is successful, a finder window opens with your built component.
