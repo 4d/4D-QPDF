@@ -90,7 +90,7 @@ Therefore, we have included the "build 4D-QPDF" base, which uses the [Build4D](h
 
 To build your own "4D-QPDF" component, use the "build 4D-QPDF" project.
 
-Adapt the "build" method to your needs. [visit sample here](https://blog.4d.com/build-your-compiled-structure-or-component-with-build4d/)
+Adapt the "build" method to your needs. [visit HDI here](https://blog.4d.com/build-your-compiled-structure-or-component-with-build4d/) [settings documentation](https://github.com/4d-depot/Build4D/blob/main/Build4D/Documentation/Classes/Component.md)
 
 Execute the "build" method.
 
