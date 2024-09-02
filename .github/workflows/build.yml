@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ARM64, X64 ]
+        os: [ ARM64, Windows ]
     runs-on: ${{ matrix.os }}
     steps:
     - name: 📄 Checkout repository
