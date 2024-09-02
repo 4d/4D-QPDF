@@ -11,7 +11,7 @@ on:
 
 env:
   TOOL4D_PRODUCT_LINE: '20Rx'
-  TOOL4D_VERSION: '20R5'
+  TOOL4D_VERSION: '20R6'
 
 jobs:
   build:
@@ -36,7 +36,7 @@ jobs:
         version: ${{env.TOOL4D_VERSION}}
         build: official
         actions: "build,pack"
-        token: ${{ secrets.DLTK }} 
+        #token: ${{ secrets.DLTK }} 
     
     - name: 🚚  Copy ${{ github.event.repository.name }}.4dbase to ${{ github.event.repository.name }}_UnitTests/Components directory
       run: |
@@ -50,7 +50,7 @@ jobs:
         version: ${{env.TOOL4D_VERSION}}
         build: official
         actions: "build"
-        token: ${{ secrets.DLTK }}
+        #token: ${{ secrets.DLTK }}
 
     - name: 🧪 Run Unit Tests
       uses: 4d/tool4d-action@main
@@ -59,7 +59,7 @@ jobs:
         product-line: ${{env.TOOL4D_PRODUCT_LINE}}
         version: ${{env.TOOL4D_VERSION}}
         build: official
-        token: ${{ secrets.DLTK }} 
+        #token: ${{ secrets.DLTK }} 
         startup-method: start_tests
 
     - name : 🚢  Archive Actifacts
