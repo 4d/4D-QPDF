@@ -11,7 +11,7 @@ on:
 
 env:
   TOOL4D_PRODUCT_LINE: '20Rx'
-  TOOL4D_VERSION: '20R6'
+  TOOL4D_VERSION: '20R5'
 
 jobs:
   build:
