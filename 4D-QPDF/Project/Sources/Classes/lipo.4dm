@@ -234,6 +234,7 @@ lipo -create  -output $root_path/lib/libcrypto.3.dylib $root_path/arm/lib/libcry
 		
 		
 		If (This:C1470._intel.isAlias)
+			
 			This:C1470._ub.createAlias($folder; This:C1470._intel.name)
 			
 		End if 
@@ -260,6 +261,7 @@ Function remove($arch : Text) : Boolean
 			: (($arch="intel") || ($arch="x86_64"))
 				$arch:="x86_64"
 				$output_file:=This:C1470._arm
+				
 				
 		End case 
 		

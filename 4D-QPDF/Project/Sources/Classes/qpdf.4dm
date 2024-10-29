@@ -52,8 +52,6 @@ property _use_system : Boolean
 property _custom_path : Text
 property _install_path : Text
 
-// private area
-property ____ : Object
 
 
 
@@ -63,7 +61,8 @@ Class constructor
 	var $cache : Object
 	
 	
-	This:C1470.____:={}  // init cache object
+	This:C1470[""]:={}  // init cache object
+	
 	$cache:=This:C1470._cache()
 	
 	// parametrable fields
@@ -98,7 +97,7 @@ Class constructor
 	
 Function _cache : Object
 	
-	return This:C1470.____
+	return This:C1470[""]
 	
 	
 	
@@ -250,8 +249,6 @@ Function get component_folder : 4D:C1709.Folder
 		End if 
 		
 		$cache.component_folder:=Folder:C1567($cache.component_folder.platformPath; fk platform path:K87:2)  // convert to full path
-		
-		
 		
 	End if 
 	

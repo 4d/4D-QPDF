@@ -9,7 +9,7 @@
 */
 
 
-property ____ : Object
+
 
 Class constructor($path : Text)
 	
@@ -17,10 +17,10 @@ Class constructor($path : Text)
 	
 	// Initialize cache object
 	
-	This:C1470.____:={}  //{options: {}; file: Null; errors: []}
+	This:C1470[""]:={}  //{options: {}; file: Null; errors: []}
 	
 	// Define default options for cache
-	This:C1470.____.options:={\
+	This:C1470[""].options:={\
 		timeout: Null:C1517; \
 		dataType: "text"; \
 		encoding: "UTF-8"; \
@@ -30,16 +30,16 @@ Class constructor($path : Text)
 		}
 	
 	// Set file path in cache options
-	This:C1470.____.file:=(Count parameters:C259=0) ? Null:C1517 : File:C1566(to.posix($path))
+	This:C1470[""].file:=(Count parameters:C259=0) ? Null:C1517 : File:C1566(to.posix($path))
 	
 	// Initialize errors array in cache
-	This:C1470.____.errors:=[]
+	This:C1470[""].errors:=[]
 	
 	
 	
 	// Getter function to access the cache object
 Function get _cache : Object
-	return This:C1470.____
+	return This:C1470[""]
 	
 	
 	// Function to reset cache errors
