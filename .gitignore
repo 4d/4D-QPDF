@@ -33,3 +33,4 @@ dependencies.json
 4D-QPDF/Helpers/qpdf/mac/intel
 4D-QPDF_UnitTests/Components/4D-QPDF.4dbase
 UT-4D-QPDF.txt
+app_sign_pack_notarize.sh
