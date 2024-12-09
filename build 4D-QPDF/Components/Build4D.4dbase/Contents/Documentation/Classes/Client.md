@@ -23,7 +23,7 @@ $customSettings is an object that contains the following parameters:
 |buildName | String | Name of the target build, defined by the component if missing in the custom settings.|
 |publishName | String | Name of the publication name, defined by the component if missing in the custom settings.|
 |projectFile | File or String | Project file (relative to the open project/absolute/filesystem). Pass the project file path if you want to build an external project (not necessary if building the current project).|
-|destinationFolder | Folder or String | Folder where the build will be generated (relative to the open project/absolute/filesystem), defined by the component if missing in the custom settings.|
+|destinationFolder | Folder or String | Folder where the build will be generated (relative to the open project/absolute/filesystem), defined by the component if missing in the custom settings. Its contents are deleted before each build.|
 |sourceAppFolder| Folder or String | Folder of the 4D Server (relative to the open project/absolute/filesystem).|
 |compilerOptions | Object | Compile options. The object is passed as parameter to the "Compile project" command if it is not null. For more details about the object format, read the documentation of the Compile project command.|
 |packedProject | Boolean | True if the project is compressed into a 4DZ file.|
@@ -42,6 +42,7 @@ $customSettings is an object that contains the following parameters:
 |clientServerSystemFolderName| String | Custom name of the local client cache folder. More details in this blog: https://blog.4d.com/multiple-servers-one-shared-local-resources/|
 |clientUserPreferencesFolderByPath| boolean | True, if each merged client application has its own folder in the user preferences folder and connects to the right server. More details in this blog: https://blog.4d.com/use-duplicated-merged-client-applications/|
 |shareLocalResourcesOnWindowsClient| | True if the local resources of the application must be downloaded from 4D Server to a shared folder on Windows merged clients. More details in this blog: https://blog.4d.com/share-local-resources-between-users-with-windows-remote-desktop-services/ |
+|databaseToEmbedInClient| File or String | Path of the folder containing the compiled structure file to embed.|
 |versioning| Object | Object containing the contents of the application informations.|
 |versioning.version| String | Version number. |
 |versioning.copyright| String | Copyright text. |

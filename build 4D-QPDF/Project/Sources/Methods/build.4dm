@@ -27,17 +27,21 @@ $settings.deletePaths:=[]
 $settings.deletePaths.push("Resources/test-files/")
 
 
-$settings.signApplication:={}
+//versioning Object Object containing the contents of the application information.
+
+
+$settings.versioning:={}
+$settings.versioning.version:="20.7.0"
+$settings.versioning.copyright:="©4D SAS 2023-2025"
+
 
 /* -------------------------------------------------- */
 /* DEFINE YOUR OWN CERTIFICATE TO SIGN YOUR COMPONENT */
 
-//$settings.signApplication.macSignature:=True
-//$settings.signApplication.macCertificate:="--your own certificat--"
+$settings.signApplication:={}
+$settings.signApplication.macSignature:=True:C214
+$settings.signApplication.macCertificate:=""
 
-/* OR */
-
-$settings.signApplication.adHocSignature:=True:C214
 
 
 /* -------------------------------------------------- */

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist>
+	<dict>
+	  <key>CFBundleName</key>
+    <string>Build4D</string>
+    <key>CFBundleShortVersionString</key>
+    <string>20.7.0</string>
+    <key>CFBundleDisplayName</key>
+    <string>Build4D</string>
+    <key>CFBundleVersion</key>
+    <string>20.7.0</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>4D SA</string>
+  </dict>
+
+</plist>
