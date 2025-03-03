@@ -27,7 +27,6 @@ $settings.deletePaths:=[]
 $settings.deletePaths.push("Resources/test-files/")
 
 
-//versioning Object Object containing the contents of the application information.
 
 
 $settings.versioning:={}
@@ -40,7 +39,7 @@ $settings.versioning.copyright:="©4D SAS 2023-2025"
 
 $settings.signApplication:={}
 $settings.signApplication.macSignature:=True:C214
-$settings.signApplication.macCertificate:=""
+$settings.signApplication.macCertificate:="Developer ID Application: CEDRIC GAREAU (BSE3R8CQZT)"
 
 
 
