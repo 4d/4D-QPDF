@@ -11,7 +11,7 @@ on:
 
 env:
   TOOL4D_PRODUCT_LINE: '20Rx'
-  TOOL4D_VERSION: '20R5'
+  TOOL4D_VERSION: '20R7'
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ARM64, Windows ]
+        os: [ macOS,Windows]
     runs-on: ${{ matrix.os }}
     steps:
     - name: 📄 Checkout repository

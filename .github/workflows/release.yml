@@ -9,12 +9,12 @@ permissions:
 
 env:
   TOOL4D_PRODUCT_LINE: '20Rx'
-  TOOL4D_VERSION: '20R5'
+  TOOL4D_VERSION: '20R7'
 
 jobs:
   build:
     name: "Build"
-    runs-on: [self-hosted,ARM64]
+    runs-on: [macOS]
     steps:
     - name: 📄 Checkout repository
       uses: actions/checkout@v4
