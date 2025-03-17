@@ -12,6 +12,7 @@ on:
 env:
   TOOL4D_PRODUCT_LINE: '20Rx'
   TOOL4D_VERSION: '20R8'
+  TOOL4D_BUILDNUMBER : 'official'
 
 jobs:
   build:
@@ -31,10 +32,10 @@ jobs:
     - name: 🏗️  Build ${{ github.event.repository.name }}
       uses: 4d/build4d-action@main
       with:
-        project: ${{ github.event.repository.name }}/Project/${{ github.event.repository.name }}.4DProject
+        project: ${{ github.workspace }}/${{ github.event.repository.name }}/Project/${{ github.event.repository.name }}.4DProject
         product-line: ${{env.TOOL4D_PRODUCT_LINE}}
         version: ${{env.TOOL4D_VERSION}}
-        build: official
+        build: ${{env.TOOL4D_BUILDNUMBER}}
         actions: "build,pack"
         token: ${{ secrets.DLTK }} 
     
@@ -45,10 +46,10 @@ jobs:
     - name: 🏗️ Build ${{ github.event.repository.name }}_UnitTests
       uses: 4d/build4d-action@main
       with:
-        project: ${{ github.event.repository.name }}_UnitTests/Project/${{ github.event.repository.name }}_UnitTests.4DProject
+        project: ${{ github.workspace }}/${{ github.event.repository.name }}_UnitTests/Project/${{ github.event.repository.name }}_UnitTests.4DProject
         product-line: ${{env.TOOL4D_PRODUCT_LINE}}
         version: ${{env.TOOL4D_VERSION}}
-        build: official
+        build: ${{env.TOOL4D_BUILDNUMBER}}
         actions: "build"
         token: ${{ secrets.DLTK }}
 
@@ -58,7 +59,7 @@ jobs:
         project: ${{ github.event.repository.name }}_UnitTests/Project/${{ github.event.repository.name }}_UnitTests.4DProject
         product-line: ${{env.TOOL4D_PRODUCT_LINE}}
         version: ${{env.TOOL4D_VERSION}}
-        build: official
+        build: ${{env.TOOL4D_BUILDNUMBER}}
         token: ${{ secrets.DLTK }} 
         startup-method: start_tests
 
