@@ -14,11 +14,18 @@ Class constructor($component : 4D:C1709.Folder)
 	var $4DZ : 4D:C1709.File
 	var $zip : 4D:C1709.ZipArchive
 	var $map : Object
+	var $baseFolder : 4D:C1709.Folder
 	
 	This:C1470._component:=$component
 	
 	
-	$4DZ:=This:C1470._component.files().query(" name = :1 AND extension = :2 "; This:C1470._component.name; ".4DZ").first()
+	
+	$baseFolder:=This:C1470._component
+	
+	If ($baseFolder.folder("Contents").exists)
+		$baseFolder:=$baseFolder.folder("Contents")
+	End if 
+	$4DZ:=$baseFolder.files().query(" name = :1 AND extension = :2 "; This:C1470._component.name; ".4DZ").first()
 	
 	This:C1470._is_compiled:=$4DZ#Null:C1517
 	
