@@ -11,8 +11,8 @@ on:
 
 env:
   TOOL4D_PRODUCT_LINE: '20Rx'
-  TOOL4D_VERSION: '20R8'
-  TOOL4D_BUILDNUMBER : 'official'
+  TOOL4D_VERSION: '20R10'
+  TOOL4D_BUILDNUMBER : '100221'
 
 jobs:
   build:
@@ -24,11 +24,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - name: 📄 Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         lfs: true
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
+        
     - name: 🏗️  Build ${{ github.event.repository.name }}
       uses: 4d/build4d-action@main
       with:
