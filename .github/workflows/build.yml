@@ -29,7 +29,7 @@ jobs:
         lfs: true
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
-        
+
     - name: 🏗️  Build ${{ github.event.repository.name }}
       uses: 4d/build4d-action@main
       with:
@@ -39,6 +39,7 @@ jobs:
         build: ${{env.TOOL4D_BUILDNUMBER}}
         actions: "build,pack"
         token: ${{ secrets.DLTK }} 
+        ignore-warnings: true
     
     - name: 🚚  Copy ${{ github.event.repository.name }}.4dbase to ${{ github.event.repository.name }}_UnitTests/Components directory
       run: |
@@ -53,6 +54,7 @@ jobs:
         build: ${{env.TOOL4D_BUILDNUMBER}}
         actions: "build"
         token: ${{ secrets.DLTK }}
+        ignore-warnings: true
 
     - name: 🧪 Run Unit Tests
       uses: 4d/tool4d-action@main

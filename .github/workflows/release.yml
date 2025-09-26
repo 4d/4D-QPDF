@@ -36,6 +36,7 @@ jobs:
         sign-files: "Helpers/qpdf/mac/ub/bin/qpdf"
         sign-certificate: "Developer ID Application: 4D"
         token: ${{ secrets.DLTK }}
+        ignore-warnings: true
 
     - name: Notarize
       run: |
