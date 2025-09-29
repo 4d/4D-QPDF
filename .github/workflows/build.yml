@@ -52,7 +52,7 @@ jobs:
         product-line: ${{env.TOOL4D_PRODUCT_LINE}}
         version: ${{env.TOOL4D_VERSION}}
         build: ${{env.TOOL4D_BUILDNUMBER}}
-        actions: "build"
+        actions: "clean,build"
         token: ${{ secrets.DLTK }}
         ignore-warnings: true
 

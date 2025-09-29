@@ -32,7 +32,7 @@ jobs:
         version: ${{env.TOOL4D_VERSION}}
         build: ${{env.TOOL4D_BUILDNUMBER}}
         targets : all
-        actions: "build,pack,sign,archive"
+        actions: "clean,build,pack,sign,archive"
         sign-files: "Helpers/qpdf/mac/ub/bin/qpdf"
         sign-certificate: "Developer ID Application: 4D"
         token: ${{ secrets.DLTK }}
