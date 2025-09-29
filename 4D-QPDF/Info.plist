@@ -11,6 +11,12 @@
     <string>4D QPDF</string>
     <key>CFBundleName</key>
     <string>4D QPDF</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.4d.qpdf</string>
+    <key>CFBundleVersion</key>
+    <string>0.0.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>0.0.0</string>
   </dict>
 
 </plist>
