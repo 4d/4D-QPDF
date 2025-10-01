@@ -49,6 +49,7 @@ jobs:
         actions: "clean,build,pack,sign,archive"
         sign-files: "Helpers/qpdf/mac/ub/bin/qpdf"
         sign-certificate: "Developer ID Application: 4D"
+        sign-as-bundle: true
         token: ${{ secrets.DLTK }}
         ignore-warnings: true
 
